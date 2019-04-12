@@ -15,18 +15,18 @@
 
 # @caviar/cli
 
-Command line tools for caviar
+Command line tools for [caviar](https://github.com/kaelzhang/caviar).
 
 ## Install
 
 ```sh
-$ npm i @caviar/cli
+$ npm i -g @caviar/cli
 ```
 
 ## Usage
 
-```js
-import @caviar/cli from '@caviar/cli'
+```sh
+$ caviar start
 ```
 
 ## License

@@ -1,8 +1,8 @@
 {
   "name": "@caviar/cli",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Command line tools for caviar",
-  "main": "src/index.js",
+  "bin": "bin/caviar.js",
   "scripts": {
     "test": "NODE_DEBUG=@caviar/cli nyc ava --timeout=10s --verbose",
     "test:only": " nyc ava --timeout=10s --verbose",
@@ -40,5 +40,8 @@
     "eslint-config-ostai": "^3.0.0",
     "eslint-plugin-import": "^2.16.0",
     "eslint": "^5.16.0"
+  },
+  "dependencies": {
+    "caviar": "^1.3.0"
   }
 }
