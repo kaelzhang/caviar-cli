@@ -2,7 +2,10 @@ const path = require('path')
 const log = require('util').debuglog('caviar:start')
 const Command = require('common-bin')
 
-const {Sandbox} = require('caviar')
+const {
+  Sandbox,
+  utils: {monitor}
+} = require('caviar')
 
 module.exports = class StartCommand extends Command {
   constructor (raw) {
@@ -38,11 +41,13 @@ module.exports = class StartCommand extends Command {
       cwd
     } = argv
 
-    await new Sandbox({
+    const subprocess = await new Sandbox({
       port,
       dev,
       cwd
     })
     .start()
+
+    monitor(subprocess).catch(console.error)
   }
 }
